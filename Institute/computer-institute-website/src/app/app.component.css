@@ -1,0 +1,47 @@
+/* Styling specifically for app-header header */
+app-header header {
+  background: #333;
+  color: white;
+  padding: 1em;
+  display: flex;  /* Ensures it's a flex container */
+  justify-content: space-between; /* Positions the logo and nav */
+  align-items: center;  /* Centers content vertically */
+}
+
+/* Specific styling for the nav */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;  /* Ensures the nav items are in a row */
+  margin: 0;
+  gap: 20px;  /* Adds spacing between nav items */
+}
+
+nav ul li {
+  display: block;  /* Keep list items as block-level for easier control */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;  /* Change color on hover */
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  bottom: 0;
+}
+
+main {
+  margin-top: 60px;
+  padding: 20px;
+}

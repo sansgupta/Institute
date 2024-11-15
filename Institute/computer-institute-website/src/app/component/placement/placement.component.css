@@ -1,0 +1,19 @@
+.placement {
+  text-align: center;
+}
+
+.placement h1 {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.placement ul {
+  list-style: none;
+  padding: 0;
+}
+
+.placement li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #555;
+}

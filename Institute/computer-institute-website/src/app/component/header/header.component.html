@@ -1,0 +1,17 @@
+<header>
+  <nav>
+    <div class="logo">Institute Name</div>
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      <li><a routerLink="/placement" routerLinkActive="active">Placement</a></li>
+    </ul>
+
+    <!-- Search Form -->
+    <form class="search-form" (submit)="onSearch($event)">
+      <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" name="search" />
+      <button type="submit">Search</button>
+    </form>
+  </nav>
+</header>

@@ -1,0 +1,73 @@
+<div class="container my-5">
+  <h2 class="text-center text-primary">Our Courses</h2>
+  <p class="lead text-secondary text-center">
+    Explore our wide range of courses designed to help you excel in the field of computer technology.
+  </p>
+
+  <!-- Search Bar -->
+  <div class="input-group mb-4">
+    <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Search Courses, Events, or Faculty..." 
+      [(ngModel)]="searchQuery" 
+      (input)="onSearchChange()"
+    />
+  </div>
+
+  <!-- Display Courses -->
+  <div class="row mt-4">
+    <div class="col-md-4" *ngFor="let course of filteredCourses">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title text-primary">{{ course.name }}</h5>
+          <p class="card-text">
+            <strong>Duration:</strong> {{ course.duration }}<br />
+            <strong>Fee:</strong> ₹{{ course.fee }}<br />
+            <strong>Classes:</strong> {{ course.classes }}<br />
+            <strong>Labs:</strong> {{ course.labs }}
+          </p>
+          <button class="btn btn-outline-primary w-100" (click)="viewDetails(course)">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display Events -->
+  <div class="container my-5">
+    <h2 class="text-center text-primary">Upcoming Events</h2>
+    <div class="row mt-4">
+      <div class="col-md-4" *ngFor="let event of filteredEvents">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">{{ event.name }}</h5>
+            <p class="card-text">
+              <strong>Date:</strong> {{ event.date }}<br />
+              <strong>Details:</strong> {{ event.details }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display Faculty -->
+  <div class="container my-5">
+    <h2 class="text-center text-primary">Our Faculty</h2>
+    <div class="row mt-4">
+      <div class="col-md-4" *ngFor="let faculty of filteredFaculty">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">{{ faculty.name }}</h5>
+            <p class="card-text">
+              <strong>Title:</strong> {{ faculty.title }}<br />
+              <strong>Department:</strong> {{ faculty.department }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

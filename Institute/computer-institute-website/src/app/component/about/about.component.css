@@ -1,0 +1,16 @@
+.about {
+    text-align: center;
+  }
+  
+  .about h1 {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #555;
+  }
+  
