@@ -1,37 +1,19 @@
-<div class="jumbotron jumbotron-fluid text-white" style="background: url('/assets/images/home-bg.jpg') no-repeat center center; background-size: cover;">
-  <div class="container">
+<div class="home-container">
+  <div class="container text-center">
     <h1 class="display-4">Welcome to Computer Institute</h1>
     <p class="lead">Your gateway to learning with modern labs, classrooms, and resources.</p>
   </div>
 </div>
 
-<div class="row text-center mt-5">
-  <div class="col-md-4">
-    <div class="card">
-      <img class="card-img-top" src="assets/images/labs.jpg" alt="Labs">
-      <div class="card-body">
-        <h5 class="card-title">Modern Labs</h5>
-        <p class="card-text">State-of-the-art computer labs with the latest technology and software.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card">
-      <img class="card-img-top" src="assets/images/classrooms.jpg" alt="Classrooms">
-      <div class="card-body">
-        <h5 class="card-title">Classrooms</h5>
-        <p class="card-text">Comfortable and spacious classrooms for interactive learning.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card">
-      <img class="card-img-top" src="assets/images/library.jpg" alt="Library">
-      <div class="card-body">
-        <h5 class="card-title">Library</h5>
-        <p class="card-text">A well-stocked library with books, journals, and e-resources.</p>
+<div class="container text-center mt-5">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let card of cardData">
+      <div class="card">
+        <img class="card-img-top" [src]="card.image" alt="{{ card.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">{{ card.description }}</p>
+        </div>
       </div>
     </div>
   </div>

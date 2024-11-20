@@ -1,60 +1,24 @@
-/* Styling specifically for app-header header */
-app-header header {
-  background: #333;
-  color: white;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between; /* For logo and nav positioning */
-  align-items: center; /* Vertically centers content */
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  margin: 0;
-  gap: 20px;
-}
-
-nav ul li {
-  display: block;
-}
-
-nav ul li a {
-  color: white;
+/* Navigation link styles */
+.nav-link {
+  cursor: pointer; /* Change cursor to pointer */
   text-decoration: none;
-  font-weight: bold;
+  color: white;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ffcc00;
+.nav-link:hover {
+  color: #ffcc00; /* Add hover effect */
 }
 
 /* Search Bar Styles */
-.search-form {
-  display: flex;
-  align-items: center;
-}
-
-.search-form input {
-  padding: 5px;
-  margin-left: 10px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  background-color: #444;
-  color: white;
-  font-size: 1rem;
-}
-
 .search-form button {
+  cursor: pointer; /* Change cursor to pointer */
   padding: 6px 10px;
   margin-left: 5px;
   background-color: #ffcc00;
   border: none;
   color: white;
   font-weight: bold;
-  cursor: pointer;
   border-radius: 5px;
 }
 

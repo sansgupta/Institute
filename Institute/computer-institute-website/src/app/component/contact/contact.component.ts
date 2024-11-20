@@ -3,72 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  template: `
-    <div class="container my-5">
-      <h2 class="text-center text-primary">Contact Us</h2>
-
-      <div class="mt-5">
-        <h4 class="text-center text-secondary">Get in Touch</h4>
-        <form class="d-flex flex-column align-items-center mt-4" (submit)="onSubmit()">
-          <!-- User's Name Text Box -->
-          <input 
-            type="text" 
-            class="form-control mb-3" 
-            placeholder="Your Name" 
-            (input)="onNameChange($event)" 
-          />
-          
-          <!-- User's Email Text Box (Not Mandatory) -->
-          <input 
-            type="email" 
-            class="form-control mb-3" 
-            placeholder="Your Email" 
-            (input)="onEmailChange($event)" 
-          />
-          
-          <!-- User's Phone Number Text Box (Mandatory) -->
-          <input 
-            type="tel" 
-            class="form-control mb-3" 
-            placeholder="Your Phone Number" 
-            (input)="onPhoneChange($event)" 
-            required
-            pattern="^[0-9]{10}$"
-            maxlength="10" 
-            minlength="10"
-          />
-          
-          <!-- Message Text Box -->
-          <textarea 
-            class="form-control mb-3" 
-            rows="4" 
-            placeholder="Write your message here..." 
-            (input)="onMessageChange($event)"
-          ></textarea>
-
-          <button type="submit" class="btn btn-primary mt-3">Send Message</button>
-        </form>
-      </div>
-    </div>
-  `,
-  styles: [`
-    .btn {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-    }
-    .text-center {
-      text-align: center;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .form-control {
-      width: 80%;
-      max-width: 600px;
-      margin: 10px 0;
-    }
-  `]
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
   name: string = '';  // To store user's name

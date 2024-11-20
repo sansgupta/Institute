@@ -1,19 +1,12 @@
-<!-- Header Section -->
-<app-header></app-header> <!-- HeaderComponent, which includes the navigation menu -->
-
-<!-- Main Content Section -->
-<main>
-  <div class="container mt-5">
-    <!-- Welcome message and introductory text -->
-    <h1>Welcome to the Institute</h1>
-    <p>Explore courses and programs we offer.</p>
-  </div>
-
-  <!-- Routed content will be displayed here -->
-  <router-outlet></router-outlet> <!-- Dynamic content based on routing -->
-</main>
-
-<!-- Footer Section -->
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>&copy; 2024 Computer Institute. All rights reserved.</p>
-</footer>
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/courses" routerLinkActive="active">Courses</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      <li><a routerLink="/placement" routerLinkActive="active">Placement</a></li>
+      <li><a routerLink="/faculty" routerLinkActive="active">Faculty</a></li>
+    </ul>
+  </nav>
+</header>

@@ -5,6 +5,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { CoursesComponent } from './component/courses/courses.component';
 import { HomeComponent } from './component/home/home.component';
 import { PlacementComponent } from './component/placement/placement.component';
+import { FacultyComponent } from './component/faculty/faculty.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },  // Assuming you have a HomeComponent
@@ -12,5 +13,6 @@ export const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'placement', component: PlacementComponent },
+  { path: 'faculty', component: FacultyComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
 ];

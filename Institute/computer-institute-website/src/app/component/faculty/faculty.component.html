@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <h2>Our Faculty</h2>
+    <p>Total Number of Faculties: {{ faculties.length }}</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let faculty of faculties; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ faculty.name }}</td>
+          <td>{{ faculty.department }}</td>
+          <td>{{ faculty.role }} years</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,22 +1,46 @@
 <div class="container mt-5">
-  <h2>Contact Us</h2>
-  <form (ngSubmit)="submitForm()" #contactForm="ngForm">
-    <div class="mb-3">
-      <label for="name" class="form-label">Your Name</label>
-      <input type="text" id="name" class="form-control" [(ngModel)]="contactFormData.name" name="name" required>
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Your Email</label>
-      <input type="email" id="email" class="form-control" [(ngModel)]="contactFormData.email" name="email" required>
-    </div>
-    <div class="mb-3">
-      <label for="phone" class="form-label">Phone Number</label>
-      <input type="text" id="phone" class="form-control" [(ngModel)]="contactFormData.phone" name="phone" required>
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Your Message</label>
-      <textarea id="message" class="form-control" [(ngModel)]="contactFormData.message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-warning" [disabled]="!contactForm.form.valid">Submit</button>
-  </form>
+  <h2 class="text-center text-primary">Contact Us</h2>
+
+  <div class="mt-5">
+    <h4 class="text-center text-secondary">Get in Touch</h4>
+    <form class="d-flex flex-column align-items-center mt-4" (submit)="onSubmit()">
+      <!-- User's Name Text Box -->
+      <input 
+        type="text" 
+        class="form-control mb-3" 
+        placeholder="Your Name" 
+        (input)="onNameChange($event)" 
+      />
+      
+      <!-- User's Email Text Box (Not Mandatory) -->
+      <input 
+        type="email" 
+        class="form-control mb-3" 
+        placeholder="Your Email" 
+        (input)="onEmailChange($event)" 
+      />
+      
+      <!-- User's Phone Number Text Box (Mandatory) -->
+      <input 
+        type="tel" 
+        class="form-control mb-3" 
+        placeholder="Your Phone Number" 
+        (input)="onPhoneChange($event)" 
+        required
+        pattern="^[0-9]{10}$"
+        maxlength="10" 
+        minlength="10"
+      />
+      
+      <!-- Message Text Box -->
+      <textarea 
+        class="form-control mb-3" 
+        rows="4" 
+        placeholder="Write your message here..." 
+        (input)="onMessageChange($event)"
+      ></textarea>
+
+      <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+    </form>
+  </div>
 </div>

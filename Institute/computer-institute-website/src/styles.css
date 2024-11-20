@@ -8,3 +8,6 @@ footer {
     margin-top: 20px;  /* Optional: Add space above footer */
   }
   
+  a {
+    cursor: pointer !important;
+  }

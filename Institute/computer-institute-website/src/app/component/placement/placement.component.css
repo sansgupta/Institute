@@ -1,19 +1,85 @@
-.placement {
+/* General Styles */
+body{
+  background-image: url('/assets/images/Placement.jpg');
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #007bff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Table Styles */
+.table {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.table thead {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+}
+
+.table th, .table td {
+  padding: 15px;
   text-align: center;
 }
 
-.placement h1 {
-  font-size: 2rem;
-  color: #007bff;
+/* Form Styles */
+form {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.placement ul {
-  list-style: none;
-  padding: 0;
+.form-control {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 12px;
 }
 
-.placement li {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  color: #555;
+label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Button Styles */
+button {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .table, .form-control {
+    width: 100%;
+  }
 }
