@@ -7,7 +7,7 @@ interface Course {
   fee: number;
   classes: number;
   labs: number;
-  topics: string[];  // Array to store topics for each course
+  topics: string[];
 }
 
 @Component({
@@ -36,7 +36,6 @@ interface Course {
                 View Details
               </button>
 
-              <!-- Topics for each course, visibility controlled by 'showDetails' -->
               <div *ngIf="showDetails[i]" class="course-details" style="margin-top: 10px;">
                 <h6 class="text-primary">Topics Covered:</h6>
                 <ul>
@@ -98,6 +97,6 @@ export class CoursesComponent {
 
   // Toggle function to show/hide details
   toggleDetails(index: number): void {
-    this.showDetails[index] = !this.showDetails[index];  // Toggle the visibility of the clicked course
+    this.showDetails[index] = !this.showDetails[index];
   }
 }

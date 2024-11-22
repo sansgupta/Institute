@@ -1,46 +1,52 @@
-<div class="container mt-5">
-  <h2 class="text-center text-primary">Contact Us</h2>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center text-primary">Contact Us</h2>
 
-  <div class="mt-5">
-    <h4 class="text-center text-secondary">Get in Touch</h4>
-    <form class="d-flex flex-column align-items-center mt-4" (submit)="onSubmit()">
-      <!-- User's Name Text Box -->
-      <input 
-        type="text" 
-        class="form-control mb-3" 
-        placeholder="Your Name" 
-        (input)="onNameChange($event)" 
-      />
-      
-      <!-- User's Email Text Box (Not Mandatory) -->
-      <input 
-        type="email" 
-        class="form-control mb-3" 
-        placeholder="Your Email" 
-        (input)="onEmailChange($event)" 
-      />
-      
-      <!-- User's Phone Number Text Box (Mandatory) -->
-      <input 
-        type="tel" 
-        class="form-control mb-3" 
-        placeholder="Your Phone Number" 
-        (input)="onPhoneChange($event)" 
-        required
-        pattern="^[0-9]{10}$"
-        maxlength="10" 
-        minlength="10"
-      />
-      
-      <!-- Message Text Box -->
-      <textarea 
-        class="form-control mb-3" 
-        rows="4" 
-        placeholder="Write your message here..." 
-        (input)="onMessageChange($event)"
-      ></textarea>
+    <div class="mt-5">
+      <h4 class="text-center text-secondary">Get in Touch</h4>
+      <form
+        class="d-flex flex-column align-items-center mt-4"
+        (submit)="onSubmit()"
+      >
+        <!-- User's Name Text Box -->
+        <input
+          type="text"
+          class="form-control mb-3"
+          placeholder="Your Name"
+          (input)="onNameChange($event)"
+        />
 
-      <button type="submit" class="btn btn-primary mt-3">Send Message</button>
-    </form>
+        <!-- User's Email Text Box (Not Mandatory) -->
+        <input
+          type="email"
+          class="form-control mb-3"
+          placeholder="Your Email"
+          (input)="onEmailChange($event)"
+        />
+
+        <!-- User's Phone Number Text Box (Mandatory) -->
+        <input
+          type="tel"
+          class="form-control mb-3"
+          placeholder="Your Phone Number"
+          (input)="onPhoneChange($event)"
+          required
+          pattern="^[0-9]{10}$"
+          maxlength="10"
+          minlength="10"
+        />
+
+        <!-- Message Text Box -->
+        <textarea
+          class="form-control mb-3"
+          rows="4"
+          placeholder="Write your message here..."
+          (input)="onMessageChange($event)"
+        ></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+      </form>
+    </div>
   </div>
-</div>
+</body>

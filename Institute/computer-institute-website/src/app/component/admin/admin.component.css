@@ -1,0 +1,40 @@
+.admin-panel {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  h3 {
+    color: #007bff;
+  }
+  

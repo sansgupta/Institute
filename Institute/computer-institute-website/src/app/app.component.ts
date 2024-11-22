@@ -29,7 +29,6 @@ import { FacultyComponent } from './component/faculty/faculty.component';
   ],
   template: `
     <app-header (navigate)="handleNavigation($event)"></app-header>
-
     <main>
     <!-- Conditionally display components based on currentPage -->
     <div *ngIf="currentPage === 'home'"><app-home></app-home></div>
@@ -39,13 +38,13 @@ import { FacultyComponent } from './component/faculty/faculty.component';
     <div *ngIf="currentPage === 'placement'"><app-placement></app-placement></div>
     <div *ngIf="currentPage === 'faculty'"><app-faculty></app-faculty></div>
   </main>
-
-    <app-footer></app-footer> <!-- Add the footer here -->
+    <app-footer></app-footer>
   `, 
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   currentPage = 'home'; // Default page
+  navbarOpen = false; // Track navbar open state
 
   constructor(private location: Location) {}
 
@@ -53,5 +52,10 @@ export class AppComponent {
   handleNavigation(page: string): void {
     this.currentPage = page; // Change the current page based on the selected page
     this.location.replaceState(page); // Optionally, update the URL without reloading
+  }
+
+  // Toggle the navbar open/close state
+  toggleNavbar(): void {
+    this.navbarOpen = !this.navbarOpen;
   }
 }

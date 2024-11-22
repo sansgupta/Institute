@@ -1,18 +1,42 @@
 <header>
-  <nav>
-    <div class="logo">Institute Name</div>
-    <ul>
-      <li><a class="nav-link" routerLink="/" routerLinkActive="active">Home</a></li>
-      <li><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
-      <li><a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a></li>
-      <li><a class="nav-link" routerLink="/placement" routerLinkActive="active">Placement</a></li>
-      <li><a class="nav-link" routerLink="/faculty" routerLinkActive="active">Faculty</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+    <!-- Logo and Navbar Toggler for Mobile -->
+    <a class="navbar-brand" href="#">Institute</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Search Form -->
-    <form class="search-form" (submit)="onSearch($event)">
-      <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" name="search" />
-      <button type="submit">Search</button>
-    </form>
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToPage('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToPage('about')">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToPage('courses')">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToPage('contact')">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToPage('placement')">Placement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateToPage('faculty')">Faculty</a>
+        </li>
+        <!-- Search Bar for Large Screens -->
+        <li class="nav-item d-none d-lg-block">
+          <form class="form-inline my-2 my-lg-0" (submit)="onSearch($event)">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #searchInput>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>

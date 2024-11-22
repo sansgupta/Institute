@@ -1,1 +1,97 @@
-<p>admin works!</p>
+<div class="admin-container">
+    <h1>Admin Panel</h1>
+  
+    <!-- Add Faculty Section -->
+    <div class="section">
+      <h2>Add Faculty</h2>
+      <div class="input-group">
+        <input
+          #facultyInput
+          type="text"
+          placeholder="Enter Faculty Name"
+          aria-label="Enter Faculty Name"
+        />
+        <button
+          (click)="addFaculty(facultyInput.value); facultyInput.value = ''"
+          aria-label="Add Faculty"
+        >
+          Add Faculty
+        </button>
+      </div>
+  
+      <ul>
+        <li *ngFor="let faculty of adminService.faculties">
+          {{ faculty.name }}
+          <button
+            (click)="removeFaculty(faculty)"
+            aria-label="Remove Faculty"
+          >
+            Remove
+          </button>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Add Course Section -->
+    <div class="section">
+      <h2>Add Course</h2>
+      <div class="input-group">
+        <input
+          #courseInput
+          type="text"
+          placeholder="Enter Course Name"
+          aria-label="Enter Course Name"
+        />
+        <button
+          (click)="addCourse(courseInput.value); courseInput.value = ''"
+          aria-label="Add Course"
+        >
+          Add Course
+        </button>
+      </div>
+  
+      <ul>
+        <li *ngFor="let course of adminService.courses">
+          {{ course.name }}
+          <button
+            (click)="removeCourse(course)"
+            aria-label="Remove Course"
+          >
+            Remove
+          </button>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Add Placement Section -->
+    <div class="section">
+      <h2>Add Placement</h2>
+      <div class="input-group">
+        <input
+          #placementInput
+          type="text"
+          placeholder="Enter Placement Details"
+          aria-label="Enter Placement Details"
+        />
+        <button
+          (click)="addPlacement(placementInput.value); placementInput.value = ''"
+          aria-label="Add Placement"
+        >
+          Add Placement
+        </button>
+      </div>
+  
+      <ul>
+        <li *ngFor="let placement of adminService.placements">
+          {{ placement.details }}
+          <button
+            (click)="removePlacement(placement)"
+            aria-label="Remove Placement"
+          >
+            Remove
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

@@ -1,6 +1,11 @@
 <header>
   <nav>
-    <ul>
+    <div class="hamburger" (click)="toggleNavbar()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul [ngClass]="{'active': navbarOpen}">
       <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
       <li><a routerLink="/about" routerLinkActive="active">About</a></li>
       <li><a routerLink="/courses" routerLinkActive="active">Courses</a></li>

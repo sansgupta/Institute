@@ -1,19 +1,71 @@
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+/* Background image styling */
+body {
+  background-image: url('/assets/images/contact.jpg'); /* Add image path here */
+  background-size: cover; /* Make the background image cover the entire page */
+  background-position: center center; /* Center the background image */
+  background-attachment: fixed; /* Ensure the background stays fixed when scrolling */
+  min-height: 100vh; /* Ensure the background covers the full height of the page */
+  display: flex;
+  flex-direction: column;
 }
 
+/* Content container styling */
+.container { 
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 15px; /* Optional: Add padding for spacing */
+  position: relative;
+  z-index: 1; /* Ensures the content is in front of the background */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
+  border-radius: 8px; /* Optional: rounded corners for content box */
+  box-sizing: border-box;
+}
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Button styling */
 .btn {
   font-size: 1rem;
   padding: 0.5rem 1rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
+/* Form Control Styles */
 .form-control {
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   margin: 10px 0;
+  box-sizing: border-box; /* Prevent inputs from overflowing */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px; /* Add more padding on smaller screens */
+  }
+
+  .form-control {
+    width: 90%; /* Make the form controls take 90% of the container width */
+  }
+
+  .btn {
+    width: 100%; /* Make the button take the full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px; /* Less padding on very small screens */
+  }
+
+  .form-control {
+    width: 100%; /* Full width for small screens */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Slightly smaller button text */
+    padding: 0.5rem 1.5rem; /* Adjust button padding */
+  }
 }
